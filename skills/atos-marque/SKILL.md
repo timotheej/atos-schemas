@@ -116,9 +116,18 @@ carré.
   partiel après import) : ne pas les utiliser sans contrôle contre le SVG
   d'origine. Une quinzaine garde une teinte hors palette de la source
   (`#0596ff`, `#66cef6`, etc.), laissée telle quelle.
-- Les icônes `Icône/…` de la page Composants (Phosphor, venues de la
-  librairie) ne sont pas des icônes Atos : à remplacer par des icônes Atos
-  dans tout support vitrine.
+- Les icônes Phosphor venues de la librairie ont été remplacées le 8 octobre
+  2026 : Agent → Artificial-Intelligence, Prompt → Chatbot, Skill → Skills,
+  itératif → Business-Continuity-Management-Process, risque → Warning-01,
+  mesure → Security Shield Check, compétences → Education-Graduation,
+  gouvernance → Person-Handshake-01, mesure de la qualité → Growth,
+  multi-acteurs → Person-Group-01.
+- Couleur d'une icône posée : ses deux bleus d'origine sur fond clair ; une
+  seule couleur seulement sur fond foncé (blanc, badge Agent) ou pour porter
+  un sens (rouge du risque). En une couleur, une icône aux zones pleines
+  devient une pastille : choisir une icône au trait.
+- Taille d'une icône posée : nouvelle instance puis `rescale()`. Ne pas
+  redimensionner une instance existante : l'épaisseur de trait ne suit pas.
 
 ## 7. Diapositives [58 à 66]
 
