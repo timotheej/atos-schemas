@@ -82,8 +82,13 @@ carré.
   exception, les guillemets [36].
 - Peut être zoomée, coupée par le bord ; motifs possibles avec une courbe par
   carré de grille [38].
-- Le fichier ne contient pas de Curve : demander le fichier source à
-  Timothée ou au service marque. Ne jamais la redessiner.
+- Dans le fichier : composant **Curve of Progress** (page « Marque Atos »),
+  `Orientation` = 1 à 4 dans l'ordre de la page 33. Géométrie extraite en
+  vectoriel du brandbook (page 32 : quart de cercle, épaisseur 40,5 % du
+  côté). Couleur : une variable `marque/*`. Redimensionner en gardant le
+  carré ; ne jamais détacher ni modifier le tracé. Le service marque n'a pas
+  fourni de fichier source : si un jour il en fournit un, remplacer le
+  tracé du composant par le sien.
 
 ## 5. Logo [22 à 30]
 
@@ -91,13 +96,25 @@ carré.
   seulement. Aucune autre combinaison [24].
 - Zone de protection à respecter [23]. Fichier officiel uniquement, jamais
   redessiné ni recoloré.
+- Dans le fichier : composant **Logo Atos** (page « Marque Atos »),
+  `Couleur` = Bleu | Blanc, tracé du SVG officiel « New Atos logo ».
+  Planche « Usages du logo » à côté.
 - Co-branding : règles pages 27 à 30 (alliances, partenaires, clients).
 
 ## 6. Icônes [106 à 109]
 
 - Style de la bibliothèque d'icônes Atos ; jamais d'icône de banque d'images.
-- Épaisseur de trait proportionnelle d'une taille à l'autre.
+- Épaisseur de trait proportionnelle d'une taille à l'autre : redimensionner
+  avec l'outil échelle (K) ou `rescale()`, pas en changeant largeur et
+  hauteur.
 - Sur fond coloré, toutes les couleurs Atos sont possibles.
+- Bibliothèque officielle (avril 2024, 519 icônes bicolores Atos Blue et
+  Light Blue) : page « Icônes Atos » du fichier, composants
+  `Icône Atos/<nom>`, couleurs liées à `marque/atos-blue` et
+  `marque/light-blue`.
+- Les icônes `Icône/…` de la page Composants (Phosphor, venues de la
+  librairie) ne sont pas des icônes Atos : à remplacer par des icônes Atos
+  dans tout support vitrine.
 
 ## 7. Diapositives [58 à 66]
 
