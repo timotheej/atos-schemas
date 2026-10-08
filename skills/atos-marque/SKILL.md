@@ -110,8 +110,12 @@ carré.
 - Sur fond coloré, toutes les couleurs Atos sont possibles.
 - Bibliothèque officielle (avril 2024, 519 icônes bicolores Atos Blue et
   Light Blue) : page « Icônes Atos » du fichier, composants
-  `Icône Atos/<nom>`, couleurs liées à `marque/atos-blue` et
-  `marque/light-blue`.
+  `Icône Atos/<nom>` de 64 × 64 (56 px utiles), couleurs liées à
+  `marque/atos-blue`, `marque/light-blue` et `marque/blanc`.
+- 23 icônes sont rangées sous « À vérifier » (traits très fins ou tracé
+  partiel après import) : ne pas les utiliser sans contrôle contre le SVG
+  d'origine. Une quinzaine garde une teinte hors palette de la source
+  (`#0596ff`, `#66cef6`, etc.), laissée telle quelle.
 - Les icônes `Icône/…` de la page Composants (Phosphor, venues de la
   librairie) ne sont pas des icônes Atos : à remplacer par des icônes Atos
   dans tout support vitrine.
