@@ -156,7 +156,7 @@ carré.
 
 ## 9. Schéma ou diapositive : ce qui change
 
-| | Schéma (Word, A4) | Diapositive (1600 × 900) |
+| | Schéma (Word, A4) | Diapositive (A4 paysage, 1400 × 990) |
 | --- | --- | --- |
 | But | expliquer, se lire seul | porter un message en quelques secondes |
 | Fond | clair, neutre | aplat `marque/deep-blue`, `marque/atos-blue` ou blanc |

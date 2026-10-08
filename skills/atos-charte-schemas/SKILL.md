@@ -31,9 +31,11 @@ vitrine, lire aussi la skill `atos-marque`.
 
 | Usage | Cadre | Lecture |
 | --- | --- | --- |
-| A4 paysage (Word, PDF) | 1400 × 990 | texte de 16 px à environ 8 pt |
-| A4 portrait (Word) | 900 × 1273 | texte de 16 px à environ 8 pt |
-| Diapositive, écran | 1600 × 900 | voir `atos-marque` |
+| **A4 paysage, format par défaut** | 1400 × 990 | texte de 16 px à environ 8 pt |
+| A4 portrait, sur demande seulement | 900 × 1273 | texte de 16 px à environ 8 pt |
+
+- Décision du 8 octobre 2026 : A4 paysage partout. Plus de cadre en
+  1600 × 900 ; les anciens sont dans la page « Archives (périmé) ».
 
 - 8 pt imprimé est la limite basse de lecture : d'où les deux formats A4. Un
   cadre plus grand, réduit pour tenir sur la page, fait tomber le texte

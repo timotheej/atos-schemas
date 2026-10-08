@@ -1,7 +1,7 @@
 // Audit en lecture seule d'un cadre de schéma Atos. À coller dans use_figma.
 // Remplacer CADRE_ID par l'identifiant du cadre (ex. '47:719').
 const CADRE_ID = 'CADRE_ID';
-const FORMATS = ['1400x990', '900x1273', '1600x900'];
+const FORMATS = ['1400x990', '900x1273'];
 const TAILLE_MIN = 16;
 
 const cadre = await figma.getNodeByIdAsync(CADRE_ID);
