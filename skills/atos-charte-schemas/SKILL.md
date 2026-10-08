@@ -102,7 +102,7 @@ Paliers disponibles : `gap/3xs` à `gap/xl` (2 à 24), `padding/none` à
 
 | Composant | Propriétés | Usage |
 | --- | --- | --- |
-| Icône/… | aucune (10 icônes Phosphor, Outline Bold) | Pictogrammes ; redimensionner l'instance, ne recolorer que le vecteur |
+| Icône Atos/… | aucune (page « Icônes Atos », bibliothèque officielle) | Pictogrammes ; règles de couleur et de taille dans `atos-marque` |
 | Badge | Type = Agent, Prompt, Skill | Mode d'usage de l'IA, toujours expliqué en légende |
 | Carte | Statut = Standard, À confirmer, POC en cours ; Disposition = Empilée, Compacte ; Numéro, Titre, Second badge, Note, Texte note | Une étape. Compacte quand la place manque (portrait) |
 | Flèche/Lien | Type = Couloir, Dépendance | Flux de fond ; exemple de trait en légende |
