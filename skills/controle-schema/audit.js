@@ -30,6 +30,12 @@ const dansInstance = (n) => { for (let x = n.parent; x && x !== cadre; x = x.par
 const tous = cadre.findAll(() => true).filter(visible);
 
 for (const n of tous) {
+  const ids = [];
+  for (const [k, v] of Object.entries(n.boundVariables || {})) for (const a of (Array.isArray(v) ? v : [v])) if (a && a.id) ids.push(a.id);
+  for (const id of ids) { const v = await figma.variables.getVariableByIdAsync(id); if (v && v.remote) ajoute('majeur', 'liaison vers la librairie', n, v.name); }
+  if (n.type === 'INSTANCE') { const m = await n.getMainComponentAsync(); if (m && m.remote) ajoute('majeur', 'composant de la librairie', n, m.name); }
+  if (n.type === 'TEXT' && typeof n.textStyleId === 'string' && n.textStyleId) { const s = await figma.getStyleByIdAsync(n.textStyleId); if (s && s.remote) ajoute('majeur', 'style de la librairie', n, s.name); }
+
   const bb = n.absoluteRenderBounds || n.absoluteBoundingBox;
   if (bb && (bb.x < pb.x - 0.5 || bb.y < pb.y - 0.5 || bb.x + bb.width > pb.x + pb.width + 0.5 || bb.y + bb.height > pb.y + pb.height + 0.5))
     ajoute('bloquant', 'débordement', n, 'sort du cadre');

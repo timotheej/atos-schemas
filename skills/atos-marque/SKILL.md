@@ -8,34 +8,35 @@ description: Identité de marque Atos tirée du brandbook 2026 (couleurs officie
 Source : *Atos brandbook 2026*, PDF du 2 mars 2026, 148 pages. Les numéros de
 page sont cités entre crochets. Contact marque : branding.atos@atos.net.
 
-La librairie « Design system » a été pensée pour des **interfaces** : surfaces
-claires, bordures fines, petits badges. Un schéma construit seulement avec
-elle a l'air d'un écran d'application. Une diapositive Atos, elle, repose sur
-des **aplats de couleur vive, une typographie très grasse, de grandes
-compositions et les Curves of Progress** [2]. Ce qui suit dit comment passer
-de l'un à l'autre.
+La charte du fichier des schémas vient d'une librairie pensée pour des
+**interfaces** : surfaces claires, bordures fines, petits badges. Un schéma
+construit seulement avec elle a l'air d'un écran d'application. Une
+diapositive Atos, elle, repose sur des **aplats de couleur vive, une
+typographie très grasse, de grandes compositions et les Curves of Progress**
+[2]. Ce qui suit dit comment passer de l'un à l'autre.
 
 ## 1. Couleurs officielles [46]
 
-| Couleur | Hex | Dans la librairie | Variable sémantique disponible |
-| --- | --- | --- | --- |
-| Atos Blue | `#0073e6` | `cobalt/500` | `background/brand/base`, `border/brand/base`, `text/brand/soft` |
-| Atos Light Blue | `#3dc7ff` | `azure/500` | seulement `background/system/information/base` (sens « information ») |
-| Atos Deep Blue | `#00005c` | `navy/500` | **aucune** en aplat (seulement `decorative/5` en teintes) |
-| Atos Pink | `#ef5e82` | `cerise/500` | aucune en aplat (`decorative/3` en teintes) |
-| Atos Green | `#4aa82d` | `fern/500` | aucune en aplat (`decorative/1` en teintes) |
-| Atos Purple | `#663894` | `grape/500` | aucune en aplat (`decorative/4` en teintes) |
-| Atos Orange | `#f56a00` | `tangerine/500` | aucune en aplat (`decorative/2` en teintes) |
+Disponibles en aplat dans la collection locale `Schémas · Couleurs`,
+groupe `marque/` (valeurs de la page 46, sourcées dans la description de
+chaque variable).
 
-Les primitives (`navy/500`, etc.) existent dans la librairie mais ne sont
-**pas publiées** : on ne peut pas les lier depuis le fichier des schémas.
+| Couleur | Hex | Variable locale |
+| --- | --- | --- |
+| Atos Blue | `#0073e6` | `marque/atos-blue` (même valeur que `background/brand/base`) |
+| Atos Light Blue | `#3dc7ff` | `marque/light-blue` |
+| Atos Deep Blue | `#00005c` | `marque/deep-blue` |
+| Atos Pink | `#ef5e82` | `marque/pink` |
+| Atos Green | `#4aa82d` | `marque/green` |
+| Atos Purple | `#663894` | `marque/purple` |
+| Atos Orange | `#f56a00` | `marque/orange` |
+| Blanc | `#ffffff` | `marque/blanc` |
 
-**Décision ouverte, à trancher par Timothée avant toute diapositive en
-aplats** : soit la librairie expose un jeu « marque » (Deep Blue, Light Blue
-et les quatre couleurs secondaires en aplat), soit le fichier des schémas
-porte une petite collection locale « Marque Atos (brandbook 2026) » avec ces
-sept valeurs, sourcées page 46. Tant que ce n'est pas tranché : ne pas
-créer de variable, ne pas coller d'hex, s'arrêter et demander.
+Les teintes claires de ces couleurs (fonds de carte, badges) restent les
+variables sémantiques (`background/decorative/1/subtler`, etc.). Les
+paliers intermédiaires du brandbook (Blue 90 à 10, etc. [68]) ne sont pas
+encore dans le fichier : les ajouter depuis la page 68 si un graphique en a
+besoin, en citant la page dans la description.
 
 ## 2. Texte sur couleur [47 à 53]
 
@@ -55,16 +56,16 @@ créer de variable, ne pas coller d'hex, s'arrêter et demander.
 ## 3. Typographie [39 à 44]
 
 - **Biennale** : police principale, titres et print. **Raleway** : son
-  substitut pour le numérique (PowerPoint, web), et la police de la
-  librairie. Dans Figma et PowerPoint, on utilise Raleway.
+  substitut pour le numérique (PowerPoint, web), et la police du fichier
+  des schémas. Dans Figma et PowerPoint, on utilise Raleway.
 - Biennale : Black et Bold pour titres et sous-titres, Medium et Regular
   pour le texte [41].
 - Raleway, hiérarchie de référence [44] (rapports à garder, pas les valeurs
   absolues, pensées pour l'affiche) : H1 Extra Bold, H2 et H3 Bold, H4 Medium,
   corps Medium.
-- Dans la librairie : styles `*/bold`, `*/semi-bold`, `*/medium`,
-  `*/regular`, de `xs` (12) à `11xl` (72). Pas de style Extra Bold : utiliser
-  `*/bold`. Le corps de texte d'une diapositive est en `*/medium`.
+- Styles locaux du fichier : `md` (16) à `11xl` (72), en `bold`,
+  `semi-bold`, `medium`, `regular`. Pas d'Extra Bold : utiliser `*/bold`. Le
+  corps de texte d'une diapositive est en `*/medium`.
 - Esprit : « bold design mindset » [39]. Titres grands et gras, peu de mots.
 
 ## 4. Curves of Progress [31 à 38]
@@ -81,7 +82,7 @@ carré.
   exception, les guillemets [36].
 - Peut être zoomée, coupée par le bord ; motifs possibles avec une courbe par
   carré de grille [38].
-- La librairie ne contient pas de Curve : demander le fichier source à
+- Le fichier ne contient pas de Curve : demander le fichier source à
   Timothée ou au service marque. Ne jamais la redessiner.
 
 ## 5. Logo [22 à 30]
@@ -128,7 +129,7 @@ carré.
 | | Schéma (Word, A4) | Diapositive (1600 × 900) |
 | --- | --- | --- |
 | But | expliquer, se lire seul | porter un message en quelques secondes |
-| Fond | clair, neutre | aplat de marque (Deep Blue, Atos Blue) ou blanc |
+| Fond | clair, neutre | aplat `marque/deep-blue`, `marque/atos-blue` ou blanc |
 | Titre | 20 à 24 px | 40 px et plus (`5xl/bold` à `11xl/bold`) |
 | Texte | 16 px, dense possible | 20 à 28 px (`xl` à `3xl`, en `medium`), peu de mots |
 | Blocs | cartes bordées, couloirs | aplats sans bordure, grands espaces |

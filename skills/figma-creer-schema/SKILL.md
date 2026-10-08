@@ -1,6 +1,6 @@
 ---
 name: figma-creer-schema
-description: Méthode pas à pas pour construire ou modifier un schéma Atos dans Figma avec le serveur MCP de Figma (use_figma, get_metadata, get_screenshot, search_design_system). À utiliser dès qu'un agent doit écrire dans le fichier des schémas.
+description: Méthode pas à pas pour construire ou modifier un schéma Atos dans Figma avec le serveur MCP de Figma (use_figma, get_metadata, get_screenshot) et la charte locale du fichier. À utiliser dès qu'un agent doit écrire dans le fichier des schémas.
 ---
 
 # Construire un schéma dans Figma par MCP
@@ -38,22 +38,31 @@ Lire d'abord `atos-charte-schemas` (et `atos-marque` pour une diapositive).
 
 ## 3. Variables et styles
 
-- Les retrouver par `search_design_system`, en filtrant sur la librairie
-  « Design system », puis `figma.variables.importVariableByKeyAsync(clé)`.
-- Clés déjà utilisées :
+- Tout est **local** au fichier : collections `Schémas · Couleurs`,
+  `Schémas · Typographie`, `Schémas · Mise en page`, et 52 styles de
+  texte. Ne pas utiliser `search_design_system` ni importer depuis la
+  librairie « Design system » : le fichier en est détaché.
+- Les retrouver par nom **et** collection :
 
-| Variable | Clé |
-| --- | --- |
-| `gap/xs` (8) | `2bd19f991d5f8231e3102da370853d55dcc4c606` |
-| `gap/xl` (24) | `91111254af0a1ae5d17f0aa1716b52d6a792545f` |
-| `padding/xl` (24) | `5cb8c978b111dfa83ebf5208446045a53971e2a6` |
-| `padding/lg` | `359a894da16abe0d970bc12e98f9d5777e89647b` |
-| `padding/sm` | `4b906c4bfb75a9b807728b967d85167e8d46b2f4` |
+```js
+const colls = await figma.variables.getLocalVariableCollectionsAsync();
+const coll = (nom) => colls.find((c) => c.name === nom);
+const vars = await figma.variables.getLocalVariablesAsync();
+const v = (collection, nom) => vars.find((x) => x.name === nom && x.variableCollectionId === coll(collection).id);
+const styles = await figma.getLocalTextStylesAsync();
+const style = (nom) => styles.find((s) => s.name === nom);
+// v('Schémas · Mise en page', 'gap/xl'), style('lg/bold').id
+```
 
 - Le plus sûr reste de lire la variable déjà liée à un nœud voisin
   (`node.boundVariables`) et de la réutiliser.
 - Lier, ne jamais recopier : `setBoundVariable('itemSpacing', variable)`,
-  `textStyleId` pour le texte.
+  `setBoundVariableForPaint` pour une couleur, `setTextStyleIdAsync` pour
+  le texte.
+- Une variable manque : la créer dans la bonne collection, avec les
+  bonnes portées (`scopes`) et sa source dans la description (valeur de la
+  librairie d'origine ou page du brandbook). Jamais une valeur « qui rend
+  bien ».
 
 ## 4. Construire
 

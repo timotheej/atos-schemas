@@ -1,23 +1,27 @@
 ---
 name: atos-charte-schemas
-description: Règles graphiques des schémas Atos (frises, tableaux, organigrammes, matrices risques et mesures) produits dans Figma avec la librairie « Design system ». À lire avant de créer, modifier ou relire un schéma : formats A4, typographie, couleurs, espacements, composants, flèches, structure d'un cadre.
+description: Règles graphiques des schémas Atos (frises, tableaux, organigrammes, matrices risques et mesures) produits dans Figma avec la charte locale du fichier des schémas. À lire avant de créer, modifier ou relire un schéma : formats A4, typographie, couleurs, espacements, composants, flèches, structure d'un cadre.
 ---
 
 # Charte des schémas Atos
 
 Un schéma explique : il doit se lire imprimé en A4, sans zoom. Ces règles
 viennent des schémas déjà validés (sujets A et B du fichier Figma) et de la
-librairie « Design system ». Pour une diapositive ou un support vitrine, lire
-aussi la skill `atos-marque`.
+librairie « Design system » (Atos), **recopiée dans le fichier** le 8 octobre
+2026 : le fichier n'en dépend plus. Pour une diapositive ou un support
+vitrine, lire aussi la skill `atos-marque`.
 
 ## 1. Principe
 
-- **Aucune valeur inventée** : toujours une variable ou un style de la
-  librairie, lié (`setBoundVariable`, `textStyleId`), jamais sa valeur
-  recopiée. Si la valeur manque, s'arrêter et demander.
-- Un même nom de variable existe dans plusieurs collections : toujours filtrer
-  par collection (`2a. semantic.color`, `2b. semantic.typography`,
-  `2c. semantic.layout`).
+- **Aucune valeur inventée** : toujours une variable ou un style **local**
+  du fichier, lié (`setBoundVariable`, `setTextStyleIdAsync`), jamais sa
+  valeur recopiée. Si la valeur manque, s'arrêter et demander.
+- Collections locales : `Schémas · Couleurs`, `Schémas · Typographie`,
+  `Schémas · Mise en page`. Les noms de variables sont ceux de la librairie
+  d'origine. Un même nom peut exister dans deux collections : toujours
+  filtrer par collection.
+- Ne jamais réactiver la librairie « Design system » dans le fichier, ni
+  utiliser `search_design_system`, qui la renvoie.
 - Toujours une **instance** de la page « Composants », jamais un dessin à la
   main ni une instance détachée.
 - Contenu repris du document source, condensé mais jamais réinventé. Toute
@@ -42,10 +46,11 @@ aussi la skill `atos-marque`.
 - Exports réglés sur chaque cadre : PNG @2x, SVG (texte gardé en texte,
   Raleway requise), PDF.
 
-## 3. Typographie (`2b. semantic.typography`)
+## 3. Typographie (`Schémas · Typographie`)
 
 - Raleway, variable `family/sans`, toujours au travers d'un **style de
-  texte** de la librairie. Aucun texte sans style.
+  texte** local : échelle `md` (16) à `11xl` (72), graisses `regular`,
+  `medium`, `semi-bold`, `bold`. Aucun texte sans style.
 - **16 px minimum** (styles `md/*`).
 
 | Rôle | Style | Taille |
@@ -60,7 +65,7 @@ aussi la skill `atos-marque`.
 - Exception connue : la mention de statut de la Carte (« À confirmer »,
   « POC en cours ») en Raleway Italic 16 px, sans style équivalent.
 
-## 4. Couleurs (`2a. semantic.color`)
+## 4. Couleurs (`Schémas · Couleurs`)
 
 | Rôle | Variable |
 | --- | --- |
@@ -74,10 +79,15 @@ aussi la skill `atos-marque`.
 | Accent | `decorative/1` (vert : `background/decorative/1/subtler`, `text/decorative/1/stronger`) |
 | Risque (seulement) | `background/system/error/subtler`, `border/system/error/subtler`, `text/system/error/stronger`, `icon/system/error/base` |
 
-- Pas de teal : il n'existe pas dans la librairie.
+- Aplats de marque (diapositive, couverture) : groupe `marque/`, voir
+  `atos-marque`. Pas dans un schéma courant.
+- Pas de teal : il n'existe pas dans la charte.
 - Une couleur garde un seul sens dans tout le fichier.
 
-## 5. Espacements, rayons, traits (`2c. semantic.layout`)
+## 5. Espacements, rayons, traits (`Schémas · Mise en page`)
+
+Paliers disponibles : `gap/3xs` à `gap/xl` (2 à 24), `padding/none` à
+`padding/4xl` (0 à 48), `radius/surface`, `border/xs`, `border/md`.
 
 | Usage | Variable | Valeur |
 | --- | --- | --- |
@@ -92,6 +102,7 @@ aussi la skill `atos-marque`.
 
 | Composant | Propriétés | Usage |
 | --- | --- | --- |
+| Icône/… | aucune (10 icônes Phosphor, Outline Bold) | Pictogrammes ; redimensionner l'instance, ne recolorer que le vecteur |
 | Badge | Type = Agent, Prompt, Skill | Mode d'usage de l'IA, toujours expliqué en légende |
 | Carte | Statut = Standard, À confirmer, POC en cours ; Disposition = Empilée, Compacte ; Numéro, Titre, Second badge, Note, Texte note | Une étape. Compacte quand la place manque (portrait) |
 | Flèche/Lien | Type = Couloir, Dépendance | Flux de fond ; exemple de trait en légende |

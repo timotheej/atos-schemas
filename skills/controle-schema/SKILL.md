@@ -16,15 +16,17 @@ description: Contrôle avant livraison d'un schéma Atos dans Figma. Lance un au
 | Gravité | Sens | Exemple |
 | --- | --- | --- |
 | bloquant | ne pas livrer | cadre hors format A4, nœud qui sort du cadre, texte sous 16 px |
-| majeur | à corriger | texte sans style, couleur ou espacement non lié, coin arrondi, instance détachée |
+| majeur | à corriger | texte sans style, couleur ou espacement non lié, liaison vers la librairie, coin arrondi, instance détachée |
 | mineur | à compléter | export manquant, `_legende` vide |
 | info | exception connue | mention de statut en italique de la Carte |
 
 Pour corriger un espacement non lié : lier la variable de même valeur dans
-`2c. semantic.layout` (4 : `padding/2xs` ou `gap/2xs` ; 8 : `padding/xs` ou
-`gap/xs` ; 12 : `padding/sm` ou `gap/sm` ; 24 : `padding/xl` ou `gap/xl` ;
-32 : `padding/2xl`). Si aucune variable n'a la valeur, ne pas en inventer :
-changer la valeur pour un palier existant, ou demander.
+`Schémas · Mise en page` (4 : `padding/2xs` ou `gap/2xs` ; 8 : `padding/xs` ou
+`gap/xs` ; 12 : `padding/sm` ou `gap/sm` ; 16 : `padding/md` ou `gap/md` ;
+20 : `padding/lg` ou `gap/lg` ; 24 : `padding/xl` ou `gap/xl` ; 32 :
+`padding/2xl` ; 40 : `padding/3xl` ; 48 : `padding/4xl`). Si aucune variable
+n'a la valeur, ne pas en inventer : changer la valeur pour un palier
+existant, ou demander.
 
 ## 2. Relecture visuelle
 

@@ -9,7 +9,7 @@ Il ne contient pas les schémas eux-mêmes : ils vivent dans Figma.
 | Ressource | Où |
 | --- | --- |
 | Fichier des schémas | Figma « Schémas Cédric – IA MCPS & UO-PIL », clé `H5ceel5Su6KVtwpSFinpUI` |
-| Librairie de la charte | Figma « Design system » (Atos), activée dans le fichier des schémas |
+| Charte (variables, styles, icônes) | **Locale au fichier des schémas** depuis le 8 octobre 2026 : collections « Schémas · Couleurs », « Schémas · Typographie », « Schémas · Mise en page », recopiées de la librairie « Design system » (Atos), qui n'est plus utilisée |
 | Charte de marque | Brandbook Atos 2026 (PDF du 2 mars 2026), à demander à Timothée, pas versionné ici |
 
 ## Les skills
@@ -26,10 +26,13 @@ Lire la skill qui correspond à la tâche **avant** d'agir :
 ## Règles qui ne se discutent pas
 
 1. **Aucune valeur inventée.** Couleur, taille, espacement, rayon, épaisseur :
-   une variable ou un style de la librairie « Design system », lié et jamais
-   recopié. Si la valeur voulue n'existe pas, s'arrêter et demander.
-2. **Ne jamais écrire dans la librairie « Design system »**, ni dans son dépôt
-   de code (`codeconnect`). Elle sert de charte, elle n'est pas à nous.
+   une variable ou un style **local** du fichier des schémas, lié et jamais
+   recopié. Si la valeur voulue n'existe pas, s'arrêter et demander. Une
+   variable ajoutée doit citer sa source dans sa description (librairie
+   « Design system » ou brandbook, avec la page).
+2. **Ne jamais toucher à la librairie « Design system »**, ni à son dépôt de
+   code (`codeconnect`), et ne pas la réactiver dans le fichier des schémas :
+   le fichier est indépendant.
 3. **Un schéma à la fois** : construire, capturer, faire valider par
    Timothée, puis passer au suivant.
 4. **Formats A4** : paysage 1400 × 990, portrait 900 × 1273. On simplifie un

@@ -22,7 +22,6 @@ Prérequis communs :
 
 - un compte Figma **Atos** avec accès en édition au fichier
   « Schémas Cédric – IA MCPS & UO-PIL » ;
-- la librairie « Design system » activée dans ce fichier ;
 - la police Raleway installée.
 
 Puis, une fois :
